@@ -193,8 +193,9 @@ function App() {
             {/* Masthead Avatar Image*/}
             <img
               className="masthead-avatar mb-5"
-              src="/img/avataaars.svg"
+              src="/img/portfolio/mypic.jpg"
               alt="..."
+              style={{ borderRadius: "8rem" }}
             />
             {/* Masthead Heading*/}
             <h1
