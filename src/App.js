@@ -127,6 +127,7 @@ function App() {
             Menu
             <i className="fas fa-bars" />
           </button>
+
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item mx-0 mx-lg-1">
