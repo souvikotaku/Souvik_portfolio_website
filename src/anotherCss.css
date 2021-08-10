@@ -1,0 +1,11 @@
+@media (orientation: portrait) {
+  #profileDiv {
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+  #profileDiv {
+    width: 31%;
+  }
+}
