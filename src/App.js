@@ -666,7 +666,13 @@ function App() {
             {/* Footer About Text*/}
             <div className="col-lg-4">
               <h4 className="text-uppercase mb-4">About Souvik</h4>
-              <p className="lead mb-0">Frontend/javascript developer</p>
+              <p className="lead mb-0">
+                Frontend/javascript developer
+                <br />
+                <i className="fa fa-envelope" /> souvikpunk@gmail.com
+                <br />
+                <i className="fa fa-phone" /> 9123332112
+              </p>
             </div>
           </div>
         </div>
