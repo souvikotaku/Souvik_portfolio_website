@@ -1,12 +1,23 @@
 import "./App.css";
 import "bootstrap";
 import "./anotherCss.css";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, notification } from "antd";
 import "antd/dist/antd.css";
+import { useState } from "react";
+import firebase from "./utils/firebase";
+import axios from "axios";
+
+const { TextArea } = Input;
 
 // window.bootstrap = require("bootstrap/dist/js/bootstrap.bundle.js");
 
 function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [message, setMessage] = useState("");
+  const [form] = Form.useForm();
+
   window.addEventListener("DOMContentLoaded", (event) => {
     // Navbar shrink function
     var navbarShrink = function () {
@@ -51,7 +62,42 @@ function App() {
   });
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+    const formRef = firebase.database().ref("portfolioForm");
+
+    const portfolioform = {
+      name,
+      email,
+      mobile: mobile === "" ? "NA" : mobile,
+      message,
+    };
+
+    formRef.push(portfolioform);
+    console.log(portfolioform);
+
+    form.resetFields();
+
+    const type = "success";
+
+    const placement = "bottomRight";
+
+    const openNotificationWithIcon = () => {
+      notification[type]({
+        message: "Form Submitted",
+        description: "Thanks for filling my contact form",
+        placement: placement,
+      });
+    };
+
+    openNotificationWithIcon();
+
+    axios
+      .post("https://formsubmit.co/ajax/souvikpunk@gmail.com", portfolioform)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -150,7 +196,12 @@ function App() {
               alt="..."
             />
             {/* Masthead Heading*/}
-            <h1 className="masthead-heading text-uppercase mb-0">Souvik Das</h1>
+            <h1
+              className="masthead-heading text-uppercase mb-0"
+              style={{ color: "white" }}
+            >
+              Souvik Das
+            </h1>
             {/* Icon Divider*/}
             <div className="divider-custom divider-light">
               <div className="divider-custom-line" />
@@ -165,6 +216,16 @@ function App() {
               style={{ color: "white" }}
             >
               Web/Javascript/Frontend Developer
+            </p>
+
+            <p
+              className="masthead-subheading font-weight-light mb-0"
+              style={{ color: "white" }}
+            >
+              Check out my{" "}
+              <a href="https://github.com/souvikotaku">
+                <i>Github</i>
+              </a>
             </p>
           </div>
         </div>
@@ -453,6 +514,7 @@ function App() {
           <div className="row justify-content-center">
             <div className="col-lg-8 col-xl-7">
               <Form
+                form={form}
                 name="basic"
                 // labelCol={{
                 //   span: 8,
@@ -476,7 +538,12 @@ function App() {
                     },
                   ]}
                 >
-                  <Input placeholder="Name" />
+                  <Input
+                    placeholder="Name"
+                    onChange={(event) => setName(event.target.value)}
+                    value={name}
+                    style={{ height: "4rem", fontSize: "33px" }}
+                  />
                 </Form.Item>
                 <Form.Item
                   // label="Username"
@@ -489,19 +556,44 @@ function App() {
                     },
                   ]}
                 >
-                  <Input placeholder="Email" />
+                  <Input
+                    placeholder="Email"
+                    onChange={(event) => setEmail(event.target.value)}
+                    value={email}
+                    style={{ height: "4rem", fontSize: "33px" }}
+                  />
                 </Form.Item>
                 <Form.Item
                   // label="Username"
                   name="phonenumber"
                   rules={[
                     {
-                      required: true,
                       message: "Please enter your mobile number!",
                     },
                   ]}
                 >
-                  <Input placeholder="Mobile Number" />
+                  <Input
+                    placeholder="Mobile Number (Optional)"
+                    onChange={(event) => setMobile(event.target.value)}
+                    value={mobile}
+                    style={{ height: "4rem", fontSize: "33px" }}
+                  />
+                </Form.Item>
+                <Form.Item
+                  name="message"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your message!",
+                    },
+                  ]}
+                >
+                  <TextArea
+                    onChange={(event) => setMessage(event.target.value)}
+                    value={message}
+                    placeholder="Message"
+                    style={{ height: "10rem", fontSize: "33px" }}
+                  />
                 </Form.Item>
                 <Form.Item
                 // wrapperCol={{
@@ -509,7 +601,12 @@ function App() {
                 //   span: 16,
                 // }}
                 >
-                  <Button type="primary" htmlType="submit">
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    size={"large"}
+                    style={{ height: "4rem", fontSize: "33px", width: "100%" }}
+                  >
                     Submit
                   </Button>
                 </Form.Item>
@@ -544,10 +641,10 @@ function App() {
               </a>
               <a
                 className="btn btn-outline-light btn-social mx-1"
-                href="https://twitter.com/souvikpunk"
+                href="https://github.com/souvikotaku"
                 target="_blank"
               >
-                <i className="fab fa-fw fa-twitter" />
+                <i className="fab fa-fw fa-github" />
               </a>
               <a
                 className="btn btn-outline-light btn-social mx-1"
