@@ -575,7 +575,7 @@ function App() {
                   ]}
                 >
                   <Input
-                    placeholder="Mobile Number (Optional)"
+                    placeholder="Mobile No. (Optional)"
                     onChange={(event) => setMobile(event.target.value)}
                     value={mobile}
                     style={{ height: "4rem", fontSize: "33px" }}
