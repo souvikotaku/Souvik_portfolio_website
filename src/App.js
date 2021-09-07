@@ -433,6 +433,68 @@ function App() {
                 />
               </div>
             </div>
+            {/* Portfolio Item 10*/}
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal10"
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Pokedex android app (React Native)</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/pokeimg1.jpg"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            {/* Portfolio Item 11*/}
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal11"
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Wikipedia android app (Ionic)</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/wiki1.jpg"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            {/* Portfolio Item 12*/}
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal12"
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>News Search android app (React Native)</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/news1.jpg"
+                  alt="..."
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1351,6 +1413,219 @@ function App() {
                         target="_blank"
                       >
                         Live app link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <!-- Portfolio Modal 10> */}
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal10"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal10"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Pokedex android app (React Native)
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5"
+                      src="/img/portfolio/pokeimg1.jpg"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p className="mb-4">
+                      A simple pokedex android app i made using react native.
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href="https://github.com/souvikotaku/souvik_react_native_pokedex_app"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a>
+                      <a
+                        href="https://drive.google.com/file/d/1IUX2L_dj6YuTDqVVqnmreVSBTICUZpIJ/view"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Apk link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <!-- Portfolio Modal 11> */}
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal11"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal11"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Wikipedia android app (Ionic)
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5"
+                      src="/img/portfolio/wiki1.jpg"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p className="mb-4">
+                      Its a wikipedia search android app i created using Ionic
+                      framework with react.
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href="https://github.com/souvikotaku/wikisearchandroidapp_ionic_react"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a>
+                      <a
+                        href="https://drive.google.com/file/d/1msLIoEYVmjNuyhZRpgJef2vEXTgeqiFo/view?usp=sharing"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Apk link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <!-- Portfolio Modal 12> */}
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal12"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal12"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      News Search android app (React Native)
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5"
+                      src="/img/portfolio/news1.jpg"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p className="mb-4">
+                      Its a news search mobile app i made using Newsapi API with
+                      react native. Just enter a topic in the searchbar and
+                      click on search articles button to get the news articles.
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href="https://github.com/souvikotaku/React-native-newsapp"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a>
+                      <a
+                        href="https://drive.google.com/file/d/10o1H0UKxHCV5iCVltuqO8sinN4Jc2u3C/view"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Apk link
                       </a>
                     </div>
                   </div>
