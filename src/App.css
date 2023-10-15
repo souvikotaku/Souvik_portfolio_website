@@ -3347,6 +3347,9 @@ fieldset:disabled .btn {
   border-color: #b02a37;
   box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
 }
+.detailsimg{
+  width: 80%
+}
 .btn-check:checked + .btn-danger,
 .btn-check:active + .btn-danger,
 .btn-danger:active,

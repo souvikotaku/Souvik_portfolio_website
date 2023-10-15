@@ -254,7 +254,7 @@ function App() {
             style={{ height: "650px", overflow: "scroll", overflowX: "hidden" }}
           >
             {/* Portfolio Item 1*/}
-            <div className="col-md-6 col-lg-4 mb-5">
+            {/* <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -272,9 +272,9 @@ function App() {
                   alt="..."
                 />
               </div>
-            </div>
+            </div> */}
             {/* Portfolio Item 2*/}
-            <div className="col-md-6 col-lg-4 mb-5">
+            {/* <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -292,7 +292,7 @@ function App() {
                   alt="..."
                 />
               </div>
-            </div>
+            </div> */}
             {/* Portfolio Item 3*/}
             <div className="col-md-6 col-lg-4 mb-5">
               <div
@@ -314,7 +314,7 @@ function App() {
               </div>
             </div>
             {/* Portfolio Item 4*/}
-            <div className="col-md-6 col-lg-4 mb-5 ">
+            {/* <div className="col-md-6 col-lg-4 mb-5 ">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -332,7 +332,7 @@ function App() {
                   alt="..."
                 />
               </div>
-            </div>
+            </div> */}
             {/* Portfolio Item 5*/}
             <div className="col-md-6 col-lg-4 mb-5 ">
               <div
@@ -354,7 +354,7 @@ function App() {
               </div>
             </div>
             {/* Portfolio Item 6*/}
-            <div className="col-md-6 col-lg-4 mb-5">
+            {/* <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -372,9 +372,9 @@ function App() {
                   alt="..."
                 />
               </div>
-            </div>
+            </div> */}
             {/* Portfolio Item 7*/}
-            <div className="col-md-6 col-lg-4 mb-5 ">
+            {/* <div className="col-md-6 col-lg-4 mb-5 ">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -392,9 +392,9 @@ function App() {
                   alt="..."
                 />
               </div>
-            </div>
+            </div> */}
             {/* Portfolio Item 8*/}
-            <div className="col-md-6 col-lg-4 mb-5 ">
+            {/* <div className="col-md-6 col-lg-4 mb-5 ">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
@@ -412,7 +412,7 @@ function App() {
                   alt="..."
                 />
               </div>
-            </div>
+            </div> */}
             {/* Portfolio Item 9*/}
             <div className="col-md-6 col-lg-4 mb-5">
               <div
@@ -491,6 +491,26 @@ function App() {
                 <img
                   className="img-fluid"
                   src="/img/portfolio/news1.jpg"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal13"
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Silent Hill android app (React Native)</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/silenthill1.jpg"
                   alt="..."
                 />
               </div>
@@ -784,12 +804,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/cabin.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       I made this appointment booking app using MERN
                       (mongo/express/react/node) stack with jwt authentication
                       for both user and admin accounts. I have implemented
@@ -862,12 +888,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/cake.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Made this image uploader app using MERN stack with
                       cloudinary for interview task purpose. Hope you all like
                       it.
@@ -935,12 +967,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/circus.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Its a movie search & watch trailers app i made by
                       consuming the API from omdb and youtube. Type the movie
                       name on the search bar, the movie panels would fill out
@@ -1011,12 +1049,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/game.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       This is full stack Invoice generator and viewer i made on
                       MERN stack (mongo/express/react/node) When you open the
                       app, fill out all the details and click on generate
@@ -1090,12 +1134,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/safe.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Its a full stack mailer app i made for my friend to send
                       invites to people for his slack group. I used firebase for
                       the backend to receive the details filled in the form and
@@ -1163,12 +1213,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/submarine.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Made this blog app using mongo,express,react and node. You
                       can submit posts, delete them, edit them and also search
                       posts by entering the author's name.
@@ -1235,12 +1291,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/img6.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       This is a MERN stack app i created for a fictional
                       restaurant's inventory where you can add, delete and check
                       out the products in the inventory. The edit functionality
@@ -1308,12 +1370,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/img7.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       I made this simple search Phone numbers with name app by
                       using MERN stack. There are a lot of phone numbers given
                       there on the list, you can search for a particular phone
@@ -1386,12 +1454,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/img8.png"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Its a simple event listing app i made for interview task
                       purpose. Click on view listing button of any category you
                       like,you would be taken to a listings page with all the
@@ -1459,12 +1533,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/pokeimg1.jpg"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       A simple pokedex android app i made using react native.
                     </p>
                     <div className="btn-group">
@@ -1529,12 +1609,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/wiki1.jpg"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Its a wikipedia search android app i created using Ionic
                       framework with react.
                     </p>
@@ -1600,12 +1686,18 @@ function App() {
                     </div>
                     {/* Portfolio Modal - Image*/}
                     <img
-                      className="img-fluid rounded mb-5"
+                      className="img-fluid rounded mb-5 detailsimg"
                       src="/img/portfolio/news1.jpg"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
-                    <p className="mb-4">
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
                       Its a news search mobile app i made using Newsapi API with
                       react native. Just enter a topic in the searchbar and
                       click on search articles button to get the news articles.
@@ -1626,6 +1718,83 @@ function App() {
                         target="_blank"
                       >
                         Apk link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal13"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal13"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Silent Hill monsters android app (React Native)
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/silenthill1.jpg"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      Its a simple app showing the list and details of various
+                      monsters from Silent Hill video game franchise. It has
+                      been published on Play Store.
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href="https://github.com/souvikotaku/silenthillmobileapp"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.souvikpunk.silenthillmonstersapp"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Play Store App link
                       </a>
                     </div>
                   </div>
