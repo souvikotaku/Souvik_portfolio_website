@@ -555,7 +555,7 @@ function App() {
             <div className="col-lg-4 ms-auto">
               <p className="lead">
                 I am a web developer and I have done professional work with
-                mostly Javascript and React.
+                mostly Javascript and React/React Native.
                 <br />I also have made some personal projects in
                 node/mongo/react native/ionic/vue etc
               </p>
@@ -707,11 +707,7 @@ function App() {
             {/* Footer Location*/}
             <div className="col-lg-4 mb-5 mb-lg-0">
               <h4 className="text-uppercase mb-4">Location</h4>
-              <p className="lead mb-0">
-                Lodha Casa Rio, Palava City
-                <br />
-                Dombivli, Mumbai
-              </p>
+              <p className="lead mb-0">Kolkata, West Bengal</p>
             </div>
             {/* Footer Social Icons*/}
             <div className="col-lg-4 mb-5 mb-lg-0">
