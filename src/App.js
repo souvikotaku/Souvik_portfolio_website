@@ -6,6 +6,7 @@ import "antd/dist/antd.css";
 import { useState } from "react";
 import firebase from "./utils/firebase";
 import axios from "axios";
+import twinwall from "./twinwall.jpg";
 
 const { TextArea } = Input;
 
@@ -164,8 +165,8 @@ function App() {
         <div
           className="container d-flex align-items-center flex-column"
           style={{
-            background:
-              "url(https://www.wallpaperup.com/uploads/wallpapers/2014/01/30/243499/4cd07be6d963be1260a0e833a48cf508-700.jpg)",
+            backgroundImage: `url(${twinwall})`,
+            backgroundSize: "contain",
             maxWidth: "100%",
             paddingBottom: "6rem",
             paddingTop: "8rem",
@@ -233,12 +234,18 @@ function App() {
         </div>
       </header>
 
-      {/* <!-- Portfolio Section--> */}
-      <section className="page-section portfolio" id="portfolio">
-        <div className="container">
+      <section
+        className="page-section portfolio"
+        id="portfolio"
+        style={{
+          paddingBottom: "0px",
+          // backgroundImage: `url(${newwall})`,
+        }}
+      >
+        <div className="container companyprojects">
           {/* Portfolio Section Heading*/}
           <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
-            Portfolio
+            Company Projects
           </h2>
           {/* Icon Divider*/}
           <div className="divider-custom">
@@ -253,52 +260,175 @@ function App() {
             className="row justify-content-center"
             style={{ height: "650px", overflow: "scroll", overflowX: "hidden" }}
           >
-            {/* Portfolio Item 1*/}
-            {/* <div className="col-md-6 col-lg-4 mb-5">
+            <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
-                data-bs-target="#portfolioModal1"
+                data-bs-target="#portfolioModal3company"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Appointment booking app</p>
+                    <p>Waste to Wealth</p>
                     <i className="fas fa-plus fa-3x" />
                   </div>
                 </div>
                 <img
                   className="img-fluid"
-                  src="/img/portfolio/cabin.png"
+                  src="/img/portfolio/wastetowealth.png"
                   alt="..."
                 />
               </div>
-            </div> */}
-            {/* Portfolio Item 2*/}
-            {/* <div className="col-md-6 col-lg-4 mb-5">
+            </div>
+
+            <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
-                data-bs-target="#portfolioModal2"
+                data-bs-target="#portfolioModal4company"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Image uploader app</p>
+                    <p>CITIIS</p>
                     <i className="fas fa-plus fa-3x" />
                   </div>
                 </div>
                 <img
                   className="img-fluid"
-                  src="/img/portfolio/cake.png"
+                  src="/img/portfolio/citiis.png"
                   alt="..."
                 />
               </div>
-            </div> */}
-            {/* Portfolio Item 3*/}
+            </div>
+
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal5company"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>MAARG</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/maarg.png"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal6company"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Mother of Democracy</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/mod.png"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal7company"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Sengol</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/sengol.png"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal8company"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Sansad Ki Kala</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/sansad.png"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Portfolio Section personal--> */}
+      <section className="page-section portfolio" id="portfolio">
+        <div className="container">
+          {/* Portfolio Section Heading*/}
+          <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+            Personal Projects
+          </h2>
+          {/* Icon Divider*/}
+          <div className="divider-custom">
+            <div className="divider-custom-line" />
+            <div className="divider-custom-icon">
+              <i className="fas fa-skull-crossbones" />
+            </div>
+            <div className="divider-custom-line" />
+          </div>
+          {/* Portfolio Grid Items*/}
+          <div
+            className="row justify-content-center"
+            style={{ height: "650px", overflow: "scroll", overflowX: "hidden" }}
+          >
             <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal3"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -313,32 +443,15 @@ function App() {
                 />
               </div>
             </div>
-            {/* Portfolio Item 4*/}
-            {/* <div className="col-md-6 col-lg-4 mb-5 ">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal4"
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Invoice generating app</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/game.png"
-                  alt="..."
-                />
-              </div>
-            </div> */}
-            {/* Portfolio Item 5*/}
+
             <div className="col-md-6 col-lg-4 mb-5 ">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal5"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -353,72 +466,15 @@ function App() {
                 />
               </div>
             </div>
-            {/* Portfolio Item 6*/}
-            {/* <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal6"
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Blog post/edit/delete App</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/submarine.png"
-                  alt="..."
-                />
-              </div>
-            </div> */}
-            {/* Portfolio Item 7*/}
-            {/* <div className="col-md-6 col-lg-4 mb-5 ">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal7"
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Restaurant CRUD inventory app</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/img6.png"
-                  alt="..."
-                />
-              </div>
-            </div> */}
-            {/* Portfolio Item 8*/}
-            {/* <div className="col-md-6 col-lg-4 mb-5 ">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal8"
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Auth number search app</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/img7.png"
-                  alt="..."
-                />
-              </div>
-            </div> */}
-            {/* Portfolio Item 9*/}
+
             <div className="col-md-6 col-lg-4 mb-5">
               <div
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal9"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -439,6 +495,9 @@ function App() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal10"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -460,6 +519,9 @@ function App() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal11"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -481,6 +543,9 @@ function App() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal12"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -501,6 +566,9 @@ function App() {
                 className="portfolio-item mx-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#portfolioModal13"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
@@ -554,10 +622,8 @@ function App() {
           <div className="row">
             <div className="col-lg-4 ms-auto">
               <p className="lead">
-                I am a web developer and I have done professional work with
-                mostly Javascript and React/React Native.
-                <br />I also have made some personal projects in
-                node/mongo/react native/ionic/vue etc
+                I am a frontend react/react native developer with 3 years of
+                experience.
               </p>
             </div>
             <div className="col-lg-4 me-auto">
@@ -760,6 +826,492 @@ function App() {
       <div className="copyright py-4 text-center text-white">
         <div className="container">
           <small>Copyright © Souvik Das 2021</small>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal3company"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal3company"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Waste to Wealth
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/wastetowealth.png"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      This is the website for Waste to Wealth. The Waste to
+                      Wealth Mission brings scientific processing of waste to
+                      the forefront to build a zero landfill and zero waste
+                      nation. The portal shall act as a common platform for
+                      technology providers, government stakeholders, urban local
+                      bodies, and users to seek relevant solutions.
+                    </p>
+                    <div className="btn-group">
+                      {/* <a
+                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a> */}
+                      <a
+                        href="https://www.wastetowealth.gov.in/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live website link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal4company"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal4company"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      CITIIS
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/citiis.png"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      This is the website for CITIIS. CITIIS, or the City
+                      Investments to Innovate, Integrate and Sustain, is a
+                      sub-component of the Government of India's Smart Cities
+                      Mission. It is a joint program of the Ministry of Housing
+                      and Urban Affairs, Agence Francaise de Development (AFD),
+                      the European Union (EU), and the National Institute of
+                      Urban Affairs (NIUA).
+                    </p>
+                    <div className="btn-group">
+                      {/* <a
+                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a> */}
+                      <a
+                        href="https://citiis.niua.in/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live website link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal5company"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal5company"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      MAARG
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/maarg.png"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      This is the website for MAARG. Startup India (MAARG) was
+                      launched by Honourable Prime Minister of India, Shri
+                      Narendra Modi on 16th January 2016 as a clarion call to
+                      the innovators, entrepreneurs, and thinkers of the nation
+                      to lead India’s sustainable economic growth and create
+                      large-scale employment opportunities. Aimed to make India
+                      one of the largest and vigorous startup ecosystems, a
+                      19-point Startup India Action Plan was launched in January
+                      2016, which paved the way for a number of policy
+                      initiatives to build a strong, conducive, and
+                      growth-oriented environment for Indian startups.
+                    </p>
+                    <div className="btn-group">
+                      {/* <a
+                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a> */}
+                      <a
+                        href="https://maarg.startupindia.gov.in/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live website link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal6company"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal6company"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Mother of Democracy
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/mod.png"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      This is the website for Mother of Democracy. Indian
+                      democracy comprises the values of harmony, freedom,
+                      acceptability, equality, and inclusivity in society
+                      enabling a dignified life for all citizens. As the largest
+                      democracy in the world, the people of Bharat institute the
+                      central, state, and local governments by means of free and
+                      fair elections.
+                    </p>
+                    <div className="btn-group">
+                      {/* <a
+                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a> */}
+                      <a
+                        href="https://bharatmotherofdemocracy.ignca.gov.in/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live website link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal7company"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal7company"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Sengol
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/sengol.png"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      This is the website for Sengol. The Sengol is a sacred
+                      symbol to be revered. It represents that the ruler is
+                      under the rule of law. It is a reminder that the powers of
+                      the ruler are not absolute. The ruler is subject to the
+                      higher norm of Dharma. The ruler has to abide by this
+                      guiding principle.
+                    </p>
+                    <div className="btn-group">
+                      {/* <a
+                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a> */}
+                      <a
+                        href="https://sengol1947ignca.in/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live website link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal8company"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal8company"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Sansad Ki Kala
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/sansad.png"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      This is the website for Sansad Ki Kala. The Parliament of
+                      India is the centre of the collective aspirations of the
+                      people of the country. It comprises the Lok Sabha and the
+                      Rajya Sabha, and is the assembly of the elected
+                      representatives of the people across India.
+                    </p>
+                    <div className="btn-group">
+                      {/* <a
+                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a> */}
+                      <a
+                        href="https://sansadkikala.ignca.gov.in/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live website link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
