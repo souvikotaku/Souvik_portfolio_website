@@ -1,4 +1,4 @@
-# My portfolio website i made using React on froentend and firebase on backend
+# My portfolio website i made using React on frontend and firebase on backend
 
 link:-
 
