@@ -455,13 +455,13 @@ function App() {
               >
                 <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                   <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Invitation sender/mailer app</p>
+                    <p>Ecommerce app (React Native)</p>
                     <i className="fas fa-plus fa-3x" />
                   </div>
                 </div>
                 <img
                   className="img-fluid"
-                  src="/img/portfolio/safe.png"
+                  src="/img/portfolio/prodappscreen.jpg"
                   alt="..."
                 />
               </div>
@@ -1670,7 +1670,7 @@ function App() {
                   <div className="col-lg-8">
                     {/* Portfolio Modal - Title*/}
                     <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      Invitation sender/mailer app
+                      Ecommerce app (React Native)
                     </h2>
                     {/* Icon Divider*/}
                     <div className="divider-custom">
@@ -1683,7 +1683,7 @@ function App() {
                     {/* Portfolio Modal - Image*/}
                     <img
                       className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/safe.png"
+                      src="/img/portfolio/prodappscreen.jpg"
                       alt="..."
                     />
                     {/* Portfolio Modal - Text*/}
@@ -1694,14 +1694,15 @@ function App() {
                         lineHeight: 1.5,
                       }}
                     >
-                      Its a full stack mailer app i made for my friend to send
-                      invites to people for his slack group. I used firebase for
-                      the backend to receive the details filled in the form and
-                      emailJs to send mails to the person filling the form.
+                      Its an ecommerce app like amazon that I had made for
+                      interview task purpose. The products are coming from a
+                      dummy api. Add to cart/Add to favorites functionality
+                      working properly. You can download the APK file from the
+                      given link and try it out.
                     </p>
                     <div className="btn-group">
                       <a
-                        href="https://github.com/souvikotaku/joindollars-mailer-app"
+                        href="https://github.com/souvikotaku/product-app"
                         className="btn btn-primary btn-lg "
                         role="button"
                         target="_blank"
@@ -1709,12 +1710,12 @@ function App() {
                         Source Code
                       </a>
                       <a
-                        href="https://joindollars-mailerapp.netlify.app/"
+                        href="https://drive.google.com/file/d/1vmvAFpd4tBzMjvbxOySF583RsSjIN1sB/view?usp=drive_link"
                         className="btn btn-secondary btn-lg "
                         role="button"
                         target="_blank"
                       >
-                        Live app link
+                        Apk link
                       </a>
                     </div>
                   </div>
