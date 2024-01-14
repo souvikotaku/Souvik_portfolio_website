@@ -884,14 +884,6 @@ function App() {
                           {item?.description}
                         </p>
                         <div className="btn-group">
-                          {/* <a
-                          href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                          className="btn btn-primary btn-lg "
-                          role="button"
-                          target="_blank"
-                        >
-                          Source Code
-                        </a> */}
                           <a
                             href={item?.url}
                             className="btn btn-secondary btn-lg "
