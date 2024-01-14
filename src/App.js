@@ -105,6 +105,103 @@ function App() {
     console.log("Failed:", errorInfo);
   };
 
+  const companyArray = [
+    {
+      id: 3,
+      name: "Waste to Wealth",
+      img: "/img/portfolio/wastetowealth.png",
+    },
+    {
+      id: 4,
+      name: "CITIIS",
+      img: "/img/portfolio/citiis.png",
+    },
+    {
+      id: 5,
+      name: "MAARG",
+      img: "/img/portfolio/maarg.png",
+    },
+    {
+      id: 6,
+      name: "MOTHER OF DEMOCRACY",
+      img: "/img/portfolio/mod.png",
+    },
+    {
+      id: 7,
+      name: "SENGOL",
+      img: "/img/portfolio/sengol.png",
+    },
+    {
+      id: 8,
+      name: "SANSAD KI KALA",
+      img: "/img/portfolio/sansad.png",
+    },
+    {
+      id: 9,
+      name: "SANKALA",
+      img: "/img/portfolio/sankala.png",
+    },
+  ];
+
+  const companyModalArray = [
+    {
+      id: 3,
+      name: "Waste to Wealth",
+      img: "/img/portfolio/wastetowealth.png",
+      description:
+        "This is the website for Waste to Wealth. The Waste to Wealth Mission brings scientific processing of waste to the forefront to build a zero landfill and zero waste nation. The portal shall act as a common platform for technology providers, government stakeholders, urban local bodies, and users to seek relevant solutions.",
+      url: "https://www.wastetowealth.gov.in/",
+    },
+    {
+      id: 4,
+      name: "CITIIS",
+      img: "/img/portfolio/citiis.png",
+      description:
+        "This is the website for CITIIS. CITIIS, or the City Investments to Innovate, Integrate and Sustain, is a sub-component of the Government of India's Smart Cities Mission. It is a joint program of the Ministry of Housing and Urban Affairs, Agence Francaise de Development (AFD), the European Union (EU), and the National Institute of Urban Affairs (NIUA).",
+      url: "https://citiis.niua.in/",
+    },
+    {
+      id: 5,
+      name: "MAARG",
+      img: "/img/portfolio/maarg.png",
+      description:
+        "This is the website for MAARG. Startup India (MAARG) was launched by Honourable Prime Minister of India, Shri Narendra Modi on 16th January 2016 as a clarion call to the innovators, entrepreneurs, and thinkers of the nation to lead India’s sustainable economic growth and create large-scale employment opportunities. Aimed to make India one of the largest and vigorous startup ecosystems, a 19-point Startup India Action Plan was launched in January 2016, which paved the way for a number of policy initiatives to build a strong, conducive, and growth-oriented environment for Indian startups.",
+      url: "https://maarg.startupindia.gov.in/",
+    },
+    {
+      id: 6,
+      name: "MOTHER OF DEMOCRACY",
+      img: "/img/portfolio/mod.png",
+      description:
+        "This is the website for Mother of Democracy. Indian democracy comprises the values of harmony, freedom, acceptability, equality, and inclusivity in society enabling a dignified life for all citizens. As the largest democracy in the world, the people of Bharat institute the central, state, and local governments by means of free and fair elections.",
+      url: "https://bharatmotherofdemocracy.ignca.gov.in/",
+    },
+    {
+      id: 7,
+      name: "SENGOL",
+      img: "/img/portfolio/sengol.png",
+      description:
+        "This is the website for Sengol. The Sengol is a sacred symbol to be revered. It represents that the ruler is under the rule of law. It is a reminder that the powers of the ruler are not absolute. The ruler is subject to the higher norm of Dharma. The ruler has to abide by this guiding principle.",
+      url: "https://sengol1947ignca.in/",
+    },
+    {
+      id: 8,
+      name: "SANSAD KI KALA",
+      img: "/img/portfolio/sansad.png",
+      description:
+        "This is the website for Sansad Ki Kala. The Parliament of India is the centre of the collective aspirations of the people of the country. It comprises the Lok Sabha and the Rajya Sabha, and is the assembly of the elected representatives of the people across India.",
+      url: "https://sansadkikala.ignca.gov.in/",
+    },
+    {
+      id: 9,
+      name: "SANKALA",
+      img: "/img/portfolio/sankala.png",
+      description:
+        "This is the website for Sankala. The Sankala Foundation is a non-profit organisation registered in 2022 under Section (8) of the Companies Act, 2013 of India. Our primary focus is on further strengthening the knowledge base and promoting dialogue among various stakeholders to foster initiatives that contribute to the sustainability of Planet Earth.",
+      url: "https://sankala.org/",
+    },
+  ];
+
   return (
     <div className="App" style={{ background: "#9ACD32" }}>
       {/* <!-- Navigation--> */}
@@ -260,143 +357,27 @@ function App() {
             className="row justify-content-center"
             style={{ height: "650px", overflow: "scroll", overflowX: "hidden" }}
           >
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal3company"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                }}
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Waste to Wealth</p>
-                    <i className="fas fa-plus fa-3x" />
+            {companyArray &&
+              companyArray?.map((item, index) => (
+                <div className="col-md-6 col-lg-4 mb-5" key={index}>
+                  <div
+                    className="portfolio-item mx-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target={`#portfolioModal${item?.id}company`}
+                    style={{
+                      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    }}
+                  >
+                    <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div className="portfolio-item-caption-content text-center text-white">
+                        <p>{item?.name}</p>
+                        <i className="fas fa-plus fa-3x" />
+                      </div>
+                    </div>
+                    <img className="img-fluid" src={item?.img} alt="..." />
                   </div>
                 </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/wastetowealth.png"
-                  alt="..."
-                />
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal4company"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                }}
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>CITIIS</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/citiis.png"
-                  alt="..."
-                />
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal5company"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                }}
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>MAARG</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/maarg.png"
-                  alt="..."
-                />
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal6company"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                }}
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Mother of Democracy</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/mod.png"
-                  alt="..."
-                />
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal7company"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                }}
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Sengol</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/sengol.png"
-                  alt="..."
-                />
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#portfolioModal8company"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                }}
-              >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <p>Sansad Ki Kala</p>
-                    <i className="fas fa-plus fa-3x" />
-                  </div>
-                </div>
-                <img
-                  className="img-fluid"
-                  src="/img/portfolio/sansad.png"
-                  alt="..."
-                />
-              </div>
-            </div>
+              ))}
           </div>
         </div>
       </section>
@@ -851,491 +832,83 @@ function App() {
         </div>
       </div>
 
-      <div
-        className="portfolio-modal modal fade"
-        id="portfolioModal3company"
-        tabIndex={-1}
-        aria-labelledby="portfolioModal3company"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-            </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    {/* Portfolio Modal - Title*/}
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      Waste to Wealth
-                    </h2>
-                    {/* Icon Divider*/}
-                    <div className="divider-custom">
-                      <div className="divider-custom-line" />
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star" />
+      {companyModalArray &&
+        companyModalArray?.map((item, index) => (
+          <div
+            className="portfolio-modal modal fade"
+            id={`portfolioModal${item?.id}company`}
+            tabIndex={-1}
+            aria-labelledby={`portfolioModal${item?.id}company`}
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-xl">
+              <div className="modal-content">
+                <div className="modal-header border-0">
+                  <button
+                    className="btn-close"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  />
+                </div>
+                <div className="modal-body text-center pb-5">
+                  <div className="container">
+                    <div className="row justify-content-center">
+                      <div className="col-lg-8">
+                        {/* Portfolio Modal - Title*/}
+                        <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                          {item?.name}
+                        </h2>
+                        {/* Icon Divider*/}
+                        <div className="divider-custom">
+                          <div className="divider-custom-line" />
+                          <div className="divider-custom-icon">
+                            <i className="fas fa-star" />
+                          </div>
+                          <div className="divider-custom-line" />
+                        </div>
+                        {/* Portfolio Modal - Image*/}
+                        <img
+                          className="img-fluid rounded mb-5 detailsimg"
+                          src={item?.img}
+                          alt="..."
+                        />
+                        {/* Portfolio Modal - Text*/}
+                        <p
+                          className="mb-4"
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: 1.5,
+                          }}
+                        >
+                          {item?.description}
+                        </p>
+                        <div className="btn-group">
+                          {/* <a
+                          href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
+                          className="btn btn-primary btn-lg "
+                          role="button"
+                          target="_blank"
+                        >
+                          Source Code
+                        </a> */}
+                          <a
+                            href={item?.url}
+                            className="btn btn-secondary btn-lg "
+                            role="button"
+                            target="_blank"
+                          >
+                            Live website link
+                          </a>
+                        </div>
                       </div>
-                      <div className="divider-custom-line" />
-                    </div>
-                    {/* Portfolio Modal - Image*/}
-                    <img
-                      className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/wastetowealth.png"
-                      alt="..."
-                    />
-                    {/* Portfolio Modal - Text*/}
-                    <p
-                      className="mb-4"
-                      style={{
-                        fontSize: "20px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      This is the website for Waste to Wealth. The Waste to
-                      Wealth Mission brings scientific processing of waste to
-                      the forefront to build a zero landfill and zero waste
-                      nation. The portal shall act as a common platform for
-                      technology providers, government stakeholders, urban local
-                      bodies, and users to seek relevant solutions.
-                    </p>
-                    <div className="btn-group">
-                      {/* <a
-                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                        className="btn btn-primary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Source Code
-                      </a> */}
-                      <a
-                        href="https://www.wastetowealth.gov.in/"
-                        className="btn btn-secondary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Live website link
-                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div
-        className="portfolio-modal modal fade"
-        id="portfolioModal4company"
-        tabIndex={-1}
-        aria-labelledby="portfolioModal4company"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-            </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    {/* Portfolio Modal - Title*/}
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      CITIIS
-                    </h2>
-                    {/* Icon Divider*/}
-                    <div className="divider-custom">
-                      <div className="divider-custom-line" />
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star" />
-                      </div>
-                      <div className="divider-custom-line" />
-                    </div>
-                    {/* Portfolio Modal - Image*/}
-                    <img
-                      className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/citiis.png"
-                      alt="..."
-                    />
-                    {/* Portfolio Modal - Text*/}
-                    <p
-                      className="mb-4"
-                      style={{
-                        fontSize: "20px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      This is the website for CITIIS. CITIIS, or the City
-                      Investments to Innovate, Integrate and Sustain, is a
-                      sub-component of the Government of India's Smart Cities
-                      Mission. It is a joint program of the Ministry of Housing
-                      and Urban Affairs, Agence Francaise de Development (AFD),
-                      the European Union (EU), and the National Institute of
-                      Urban Affairs (NIUA).
-                    </p>
-                    <div className="btn-group">
-                      {/* <a
-                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                        className="btn btn-primary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Source Code
-                      </a> */}
-                      <a
-                        href="https://citiis.niua.in/"
-                        className="btn btn-secondary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Live website link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="portfolio-modal modal fade"
-        id="portfolioModal5company"
-        tabIndex={-1}
-        aria-labelledby="portfolioModal5company"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-            </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    {/* Portfolio Modal - Title*/}
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      MAARG
-                    </h2>
-                    {/* Icon Divider*/}
-                    <div className="divider-custom">
-                      <div className="divider-custom-line" />
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star" />
-                      </div>
-                      <div className="divider-custom-line" />
-                    </div>
-                    {/* Portfolio Modal - Image*/}
-                    <img
-                      className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/maarg.png"
-                      alt="..."
-                    />
-                    {/* Portfolio Modal - Text*/}
-                    <p
-                      className="mb-4"
-                      style={{
-                        fontSize: "20px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      This is the website for MAARG. Startup India (MAARG) was
-                      launched by Honourable Prime Minister of India, Shri
-                      Narendra Modi on 16th January 2016 as a clarion call to
-                      the innovators, entrepreneurs, and thinkers of the nation
-                      to lead India’s sustainable economic growth and create
-                      large-scale employment opportunities. Aimed to make India
-                      one of the largest and vigorous startup ecosystems, a
-                      19-point Startup India Action Plan was launched in January
-                      2016, which paved the way for a number of policy
-                      initiatives to build a strong, conducive, and
-                      growth-oriented environment for Indian startups.
-                    </p>
-                    <div className="btn-group">
-                      {/* <a
-                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                        className="btn btn-primary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Source Code
-                      </a> */}
-                      <a
-                        href="https://maarg.startupindia.gov.in/"
-                        className="btn btn-secondary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Live website link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="portfolio-modal modal fade"
-        id="portfolioModal6company"
-        tabIndex={-1}
-        aria-labelledby="portfolioModal6company"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-            </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    {/* Portfolio Modal - Title*/}
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      Mother of Democracy
-                    </h2>
-                    {/* Icon Divider*/}
-                    <div className="divider-custom">
-                      <div className="divider-custom-line" />
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star" />
-                      </div>
-                      <div className="divider-custom-line" />
-                    </div>
-                    {/* Portfolio Modal - Image*/}
-                    <img
-                      className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/mod.png"
-                      alt="..."
-                    />
-                    {/* Portfolio Modal - Text*/}
-                    <p
-                      className="mb-4"
-                      style={{
-                        fontSize: "20px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      This is the website for Mother of Democracy. Indian
-                      democracy comprises the values of harmony, freedom,
-                      acceptability, equality, and inclusivity in society
-                      enabling a dignified life for all citizens. As the largest
-                      democracy in the world, the people of Bharat institute the
-                      central, state, and local governments by means of free and
-                      fair elections.
-                    </p>
-                    <div className="btn-group">
-                      {/* <a
-                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                        className="btn btn-primary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Source Code
-                      </a> */}
-                      <a
-                        href="https://bharatmotherofdemocracy.ignca.gov.in/"
-                        className="btn btn-secondary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Live website link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="portfolio-modal modal fade"
-        id="portfolioModal7company"
-        tabIndex={-1}
-        aria-labelledby="portfolioModal7company"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-            </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    {/* Portfolio Modal - Title*/}
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      Sengol
-                    </h2>
-                    {/* Icon Divider*/}
-                    <div className="divider-custom">
-                      <div className="divider-custom-line" />
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star" />
-                      </div>
-                      <div className="divider-custom-line" />
-                    </div>
-                    {/* Portfolio Modal - Image*/}
-                    <img
-                      className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/sengol.png"
-                      alt="..."
-                    />
-                    {/* Portfolio Modal - Text*/}
-                    <p
-                      className="mb-4"
-                      style={{
-                        fontSize: "20px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      This is the website for Sengol. The Sengol is a sacred
-                      symbol to be revered. It represents that the ruler is
-                      under the rule of law. It is a reminder that the powers of
-                      the ruler are not absolute. The ruler is subject to the
-                      higher norm of Dharma. The ruler has to abide by this
-                      guiding principle.
-                    </p>
-                    <div className="btn-group">
-                      {/* <a
-                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                        className="btn btn-primary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Source Code
-                      </a> */}
-                      <a
-                        href="https://sengol1947ignca.in/"
-                        className="btn btn-secondary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Live website link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="portfolio-modal modal fade"
-        id="portfolioModal8company"
-        tabIndex={-1}
-        aria-labelledby="portfolioModal8company"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              />
-            </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    {/* Portfolio Modal - Title*/}
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      Sansad Ki Kala
-                    </h2>
-                    {/* Icon Divider*/}
-                    <div className="divider-custom">
-                      <div className="divider-custom-line" />
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star" />
-                      </div>
-                      <div className="divider-custom-line" />
-                    </div>
-                    {/* Portfolio Modal - Image*/}
-                    <img
-                      className="img-fluid rounded mb-5 detailsimg"
-                      src="/img/portfolio/sansad.png"
-                      alt="..."
-                    />
-                    {/* Portfolio Modal - Text*/}
-                    <p
-                      className="mb-4"
-                      style={{
-                        fontSize: "20px",
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      This is the website for Sansad Ki Kala. The Parliament of
-                      India is the centre of the collective aspirations of the
-                      people of the country. It comprises the Lok Sabha and the
-                      Rajya Sabha, and is the assembly of the elected
-                      representatives of the people across India.
-                    </p>
-                    <div className="btn-group">
-                      {/* <a
-                        href="https://github.com/souvikotaku/movie_search_trailers_app/tree/main/movie_search_trailers_app_code"
-                        className="btn btn-primary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Source Code
-                      </a> */}
-                      <a
-                        href="https://sansadkikala.ignca.gov.in/"
-                        className="btn btn-secondary btn-lg "
-                        role="button"
-                        target="_blank"
-                      >
-                        Live website link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        ))}
 
       {/* <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1--> */}
