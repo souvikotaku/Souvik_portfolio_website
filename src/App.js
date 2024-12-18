@@ -647,8 +647,8 @@ function App() {
           <div className="row">
             <div className="col-lg-4 ms-auto">
               <p className="lead">
-                I am a frontend react/react native developer with 3 years of
-                experience.
+                I am a frontend react/frontend developer with more than 4 years
+                of experience.
               </p>
             </div>
             <div className="col-lg-4 me-auto">
