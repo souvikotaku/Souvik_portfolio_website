@@ -647,8 +647,8 @@ function App() {
           <div className="row">
             <div className="col-lg-4 ms-auto">
               <p className="lead">
-                I am a frontend react/frontend developer with more than 4 years
-                of experience.
+                I am a react/frontend developer with more than 5 years of
+                experience.
               </p>
             </div>
             <div className="col-lg-4 me-auto">
@@ -1714,14 +1714,14 @@ function App() {
                       >
                         Source Code
                       </a>
-                      <a
+                      {/* <a
                         href="https://drive.google.com/file/d/1IUX2L_dj6YuTDqVVqnmreVSBTICUZpIJ/view"
                         className="btn btn-secondary btn-lg "
                         role="button"
                         target="_blank"
                       >
                         Apk link
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -1869,14 +1869,14 @@ function App() {
                       >
                         Source Code
                       </a>
-                      <a
+                      {/* <a
                         href="https://drive.google.com/file/d/10o1H0UKxHCV5iCVltuqO8sinN4Jc2u3C/view"
                         className="btn btn-secondary btn-lg "
                         role="button"
                         target="_blank"
                       >
                         Apk link
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -1934,8 +1934,7 @@ function App() {
                       }}
                     >
                       Its a simple app showing the list and details of various
-                      monsters from Silent Hill video game franchise. It has
-                      been published on Play Store.
+                      monsters from Silent Hill video game franchise.
                     </p>
                     <div className="btn-group">
                       <a
@@ -1946,14 +1945,14 @@ function App() {
                       >
                         Source Code
                       </a>
-                      <a
+                      {/* <a
                         href="https://play.google.com/store/apps/details?id=com.souvikpunk.silenthillmonstersapp"
                         className="btn btn-secondary btn-lg "
                         role="button"
                         target="_blank"
                       >
                         Play Store App link
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
