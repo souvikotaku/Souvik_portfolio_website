@@ -141,6 +141,11 @@ function App() {
       name: "SANKALA",
       img: "/img/portfolio/sankala.png",
     },
+    {
+      id: 10,
+      name: "SENSEZ9",
+      img: "/img/portfolio/sensez.jpg",
+    },
   ];
 
   const companyModalArray = [
@@ -199,6 +204,14 @@ function App() {
       description:
         "This is the website for Sankala. The Sankala Foundation is a non-profit organisation registered in 2022 under Section (8) of the Companies Act, 2013 of India. Our primary focus is on further strengthening the knowledge base and promoting dialogue among various stakeholders to foster initiatives that contribute to the sustainability of Planet Earth.",
       url: "https://sankala.org/",
+    },
+    {
+      id: 10,
+      name: "SENSEZ9",
+      img: "/img/portfolio/sensez.jpg",
+      description:
+        "This is the website for Sensez9. Sensez9 is a mission driven company focused on enhancing the care delivery process through technology.",
+      url: "https://sensez9.tech/",
     },
   ];
 
