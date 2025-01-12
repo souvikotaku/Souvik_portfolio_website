@@ -621,6 +621,30 @@ function App() {
                 />
               </div>
             </div>
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal16"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>
+                      Car wash/servicing app (React native/node/express/mongo)
+                    </p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/carapp.jpg"
+                  alt="..."
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2116,6 +2140,81 @@ function App() {
                         target="_blank"
                       >
                         Live app link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal16"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal16"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Car wash/servicing app (React native/node/express/mongo)
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/carapp.jpg"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      Its a full stack car wash/servicing app that i made for
+                      interview purpose.
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href="https://github.com/souvikotaku/carapp"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a>
+                      <a
+                        href="https://drive.google.com/file/d/11cU46ol7PsOKnMVbDvAvnJfHga3G1jRp/view?usp=sharing"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Apk link
                       </a>
                     </div>
                   </div>
