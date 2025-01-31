@@ -667,6 +667,28 @@ function App() {
                 />
               </div>
             </div>
+            <div className="col-md-6 col-lg-4 mb-5">
+              <div
+                className="portfolio-item mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#portfolioModal18"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                }}
+              >
+                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div className="portfolio-item-caption-content text-center text-white">
+                    <p>Movie Search Dashboard app (React)</p>
+                    <i className="fas fa-plus fa-3x" />
+                  </div>
+                </div>
+                <img
+                  className="img-fluid"
+                  src="/img/portfolio/moviedashback.jpg"
+                  alt="..."
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2312,6 +2334,81 @@ function App() {
                         target="_blank"
                       >
                         Apk link
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="portfolio-modal modal fade"
+        id="portfolioModal18"
+        tabIndex={-1}
+        aria-labelledby="portfolioModal18"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-xl">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                className="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body text-center pb-5">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-8">
+                    {/* Portfolio Modal - Title*/}
+                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
+                      Movie Search Dashboard (React)
+                    </h2>
+                    {/* Icon Divider*/}
+                    <div className="divider-custom">
+                      <div className="divider-custom-line" />
+                      <div className="divider-custom-icon">
+                        <i className="fas fa-star" />
+                      </div>
+                      <div className="divider-custom-line" />
+                    </div>
+                    {/* Portfolio Modal - Image*/}
+                    <img
+                      className="img-fluid rounded mb-5 detailsimg"
+                      src="/img/portfolio/moviedashback.jpg"
+                      alt="..."
+                    />
+                    {/* Portfolio Modal - Text*/}
+                    <p
+                      className="mb-4"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      Its a movie search react app which i made for interview
+                      purpose.
+                    </p>
+                    <div className="btn-group">
+                      <a
+                        href="https://github.com/souvikotaku/movienewapp"
+                        className="btn btn-primary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Source Code
+                      </a>
+                      <a
+                        href="https://moviedashboardsearch.netlify.app/"
+                        className="btn btn-secondary btn-lg "
+                        role="button"
+                        target="_blank"
+                      >
+                        Live app link
                       </a>
                     </div>
                   </div>
