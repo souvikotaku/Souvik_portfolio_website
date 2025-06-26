@@ -374,6 +374,7 @@ function App() {
       sourceUrl: 'https://github.com/souvikotaku/expo-weatherapp',
       liveUrl:
         'https://drive.google.com/file/d/1qWZ3ygD9ZIi2R_b3Q0B0tOm4asrgJTmG/view?usp=sharing',
+      liveUrlText: 'Apk link',
     },
   ];
 
